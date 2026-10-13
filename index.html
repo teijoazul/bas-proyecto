@@ -255,6 +255,743 @@ canvas#wave{width:100%;height:170px;display:block;background:#01012e;border-radi
 @media (max-width:720px){.parts{grid-template-columns:1fr 1fr}.inside{grid-template-columns:1fr}}
 @media (max-width:420px){.parts{grid-template-columns:1fr}}
 
+/* ---------- costos ---------- */
+.ctabs{display:inline-flex;background:rgba(255,255,255,.1);border-radius:999px;padding:.3rem;margin:1.6rem 0 2rem}
+.ctab{background:none;border:0;padding:.65rem 1.5rem;border-radius:999px;font-weight:600}
+.ctab[aria-selected="true"]{background:#fff;color:var(--navy)}
+.total{font-size:clamp(3rem,10vw,6rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.total small{display:block;font-size:1rem;font-weight:500;letter-spacing:0;margin-top:.4rem;opacity:.85}
+.bar{display:flex;height:46px;border-radius:14px;overflow:hidden;margin:2rem 0 1.2rem;background:rgba(255,255,255,.12)}
+.bar i{display:block;height:100%;transition:width .5s}
+.rows{list-style:none;max-width:42rem}
+.rows li{display:grid;grid-template-columns:18px 1fr auto;gap:.9rem;align-items:start;padding:.8rem 0;border-top:1px solid rgba(255,255,255,.18)}
+.rows li:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.rows u{width:14px;height:14px;border-radius:4px;margin-top:.4rem}
+.rows b{font-weight:600}.rows span{font-size:.88rem;opacity:.85;display:block;line-height:1.4}
+.rows em{font-style:normal;font-weight:800;font-variant-numeric:tabular-nums}
+.channels{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.6rem}
+.channel{border:2px solid rgba(255,255,255,.3);border-radius:22px;padding:1.4rem;text-align:center}
+.channel svg{width:44px;height:44px;fill:none;stroke:var(--sky);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin:0 auto .6rem}
+.channel b{font-weight:600}
+.sub-h{margin-top:4rem;font-size:1.7rem}
+@media (max-width:760px){.channels{grid-template-columns:1fr}}
+
+/* ---------- camino ---------- */
+.steps-h{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:2.2rem;position:relative}
+.ph-btn{border:0;background:var(--mist);border-radius:18px;padding:1rem;text-align:left;font-weight:600;display:flex;flex-direction:column;gap:.2rem}
+.ph-btn small{font-size:.8rem;font-weight:500;color:#4a4a7a}
+.ph-btn[aria-selected="true"]{background:var(--navy);color:#fff}
+.ph-btn[aria-selected="true"] small{color:var(--sky)}
+.ph-panel{background:#fff;border-left:4px solid var(--royal);padding:1.1rem 1.4rem;margin-top:1rem;font-size:1rem;max-width:44rem;min-height:84px}
+.swap{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.4rem}
+.sw{border:0;border-radius:22px;padding:1.3rem 1.4rem;text-align:left;background:var(--mist);color:var(--ink);min-height:140px;display:flex;flex-direction:column;gap:.4rem}
+.sw .k{font-size:.82rem;font-weight:600;color:var(--royal)}
+.sw.after{background:var(--navy);color:#fff}
+.sw.after .k{color:var(--signal)}
+.sw b{font-weight:600;font-size:1.02rem;line-height:1.35}
+.sw p{font-size:.92rem;line-height:1.45}
+.sw .hint{margin-top:auto;font-size:.78rem;opacity:.7}
+@media (max-width:760px){.steps-h{grid-template-columns:1fr 1fr}.swap{grid-template-columns:1fr}}
+.notice{margin-top:2.4rem;background:var(--mist);border-radius:18px;padding:1.2rem 1.5rem;font-size:.97rem;max-width:46rem}
+.next{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.4rem}
+.next div{border-top:3px solid var(--royal);padding-top:.8rem;font-size:.93rem;line-height:1.45}
+.next b{display:block;font-weight:600;margin-bottom:.2rem}
+@media (max-width:860px){.next{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.next{grid-template-columns:1fr}}
+
+/* ---------- equipo / contacto ---------- */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.4rem}
+.avatar{position:relative;aspect-ratio:1;border-radius:26px;background:var(--royal);margin-bottom:1.1rem;overflow:hidden;display:grid;place-items:center;font-size:3.4rem;font-weight:800}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.role{font-weight:600;color:var(--sky);font-size:.97rem;margin-bottom:.5rem}
+.person p{font-size:.95rem;opacity:.92}
+.ig{display:inline-block;margin-top:.7rem;font-weight:600;font-size:.95rem;text-decoration:none;border-bottom:2px solid var(--sky)}
+.thanks{margin-top:3rem;max-width:46rem;font-size:.95rem;opacity:.9}
+@media (max-width:820px){.team{grid-template-columns:1fr;max-width:340px}}
+.contact-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.8rem}
+.contact-row a{display:flex;align-items:center;gap:.7rem;background:#fff;color:var(--navy);padding:.85rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600}
+.contact-row a:hover{background:var(--sky)}
+.contact-row svg{width:20px;height:20px;fill:currentColor}
+footer{background:var(--navy-deep);color:#fff;padding:2rem 0;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem}
+footer .fb{display:flex;align-items:center;gap:.6rem;font-weight:800}
+footer img{height:28px}
+
+/* ---------- lightbox ---------- */
+dialog{border:0;background:transparent;max-width:min(94vw,900px);max-height:92vh;margin:auto;overflow:visible}
+dialog::backdrop{background:rgba(1,1,46,.88)}
+dialog img{max-width:100%;max-height:84vh;margin:0 auto;border-radius:16px}
+dialog button{display:block;margin:1rem auto 0;background:#fff;color:var(--navy);border:0;border-radius:999px;padding:.6rem 1.6rem;font-weight:600}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hs::after{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="BAS, ir al inicio"><img src="img/logo-bas-blanco.png" alt="">BAS</a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav aria-label="Principal">
+      <ul id="menu">
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#ortesis">Órtesis</a></li>
+        <li><a href="#protesis">Prótesis</a></li>
+        <li><a href="#probalo">Probalo</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#costos">Costos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a class="pill" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <div class="lockup">
+        <img src="img/logo-bas-blanco.png" alt="Logo de BAS: una mano estilizada con una gota">
+        <h1>BAS</h1>
+      </div>
+      <p class="sub">Sistemas de asistencia biónica</p>
+      <div class="award"><strong>Proyecto ganador</strong> del certamen de innovación tecnológica/técnica en la Expo Industria “Hecho en Merlo 2025” y reconocido en el Senado de la Nación con un diploma de honor.</div>
+      <div class="cta-row">
+        <a class="btn solid" href="#probalo">Probá cómo funciona</a>
+        <a class="btn ghost" href="#proyecto">Conocer el proyecto</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="img/ortesis-2.webp" alt="Guante de rehabilitación BAS con anillos 3D y servomotores en el antebrazo">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <ul>
+      <li><b>Hecho en Merlo 2025</b>Ganador en innovación tecnológica/técnica</li>
+      <li><b>Senado de la Nación</b>Diploma de honor</li>
+      <li><b>Consulta clínica</b>Kinesiólogo del Hospital Municipal Eva Perón</li>
+      <li><b>Contacto con el INTI</b>Para cuidar ergonomía y utilidad</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PROYECTO -->
+<section class="sec light" id="proyecto">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,34 C320,-6 760,-6 1100,22 C1250,34 1360,34 1440,20 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>¿Qué es BAS?</h2>
+    <p class="lead">Un proyecto escolar que desarrolla tecnologías accesibles para recuperar la mano: un guante terapéutico para rehabilitar y una prótesis biónica para quien perdió el miembro.</p>
+    <p class="lead" style="margin-top:1rem">Su propósito es democratizar el acceso a las tecnologías de apoyo. No reemplaza al profesional de la salud: le suma una herramienta.</p>
+
+    <div class="systems">
+      <a class="syscard" href="#ortesis">
+        <div class="im"><img src="img/ortesis-1.webp" alt="Guante BAS" loading="lazy"></div>
+        <div class="tx"><h3>Órtesis robótica</h3><p>Un guante que ayuda a abrir y cerrar la mano para rehabilitarla tras un ACV, un traumatismo o una cirugía.</p><span class="go">Ver el guante</span></div>
+      </a>
+      <a class="syscard photo" href="#protesis">
+        <div class="im"><img src="img/protesis-brazo.webp" alt="Prótesis BAS con sensor EMG en el antebrazo" loading="lazy"></div>
+        <div class="tx"><h3>Prótesis biónica</h3><p>Una mano impresa en 3D que se mueve con la señal eléctrica de los músculos del antebrazo.</p><span class="go">Ver la prótesis</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="sec mist" id="problema">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,20 C200,40 500,50 800,30 C1050,12 1300,10 1440,34 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>El gran obstáculo es el acceso</h2>
+    <p class="lead">Las tecnologías de apoyo suelen ser costosas, importadas o estar solo en clínicas privadas.</p>
+    <div class="panel-w">
+      <div class="stats">
+        <div class="ring" style="--p:70" role="img" aria-label="70 por ciento"><b>70%</b></div>
+        <div class="stat"><b class="big">70% de quienes sobreviven a un ACV</b><span>presenta dificultades motrices en la mano y el brazo. Se producen 50.000 a 60.000 casos por año en Argentina.</span><small>Fuente: Sociedad Neurológica Argentina</small></div>
+        <div class="stat"><b class="big">Miles de amputaciones</b><span>por año en Argentina. Las de la mano pesan más: es la principal herramienta de trabajo.</span><small>Fuente: UNSAM</small></div>
+      </div>
+      <div class="dots-wrap">
+        <div>
+          <div class="dots" id="dots" role="img" aria-label="De cada 100 pacientes, entre 3 y 10 acceden a tecnologías de rehabilitación"></div>
+          <div class="legend"><span class="l1">3 acceden</span><span class="l2">hasta 10 acceden</span><span class="l3">el resto no accede</span></div>
+        </div>
+        <div>
+          <h3>Solo entre 3 y 10 de cada 100 pacientes tienen acceso a tecnologías de rehabilitación.</h3>
+          <p class="small" style="margin-top:.6rem">Estimación de la OMS. El resto queda sin acceso a estos recursos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÓRTESIS -->
+<section class="sec navy" id="ortesis">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,30 C300,56 600,8 900,22 C1130,32 1330,44 1440,16 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="hs-stage">
+          <div class="box">
+            <img class="main" src="img/ortesis-1.webp" alt="Guante de rehabilitación BAS">
+            <button class="hs" style="left:49%;top:13%" data-k="anillos" aria-label="Anillos 3D">1</button>
+            <button class="hs" style="left:43%;top:25%" data-k="guante" aria-label="Guante textil">2</button>
+            <button class="hs" style="left:46%;top:43%" data-k="tanza" aria-label="Hilo de tanza">3</button>
+            <button class="hs" style="left:46%;top:57%" data-k="servos" aria-label="Servomotores">4</button>
+            <button class="hs" style="left:36%;top:76%" data-k="base" aria-label="Base impresa en 3D">5</button>
+          </div>
+        </div>
+        <div class="hs-info" id="hsInfo" aria-live="polite"><img alt="" id="hsImg"><p id="hsTxt"></p></div>
+      </div>
+      <div>
+        <h2>Órtesis robótica: el guante</h2>
+        <p class="for">Para rehabilitar la mano tras un ACV, un traumatismo o una cirugía.</p>
+        <p>Cuando se corta la conexión entre las neuronas del cerebro y la mano, repetir el movimiento ayuda a recuperarlo. El guante hace ese movimiento de apertura y cierre, y se controla desde el celular por Bluetooth.</p>
+        <p>Complementa la terapia tradicional y permite hacer los ejercicios en casa.</p>
+        <p class="small" style="margin-top:1.2rem">Tocá los puntos de la foto para ver cada parte.</p>
+        <div class="chips">
+          <span class="chip">Tecnología accesible con impacto real</span>
+          <span class="chip">Control inalámbrico personalizado</span>
+          <span class="chip">Rehabilitación en casa</span>
+          <span class="chip">Integración con profesionales y centros</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="tiles-h">¿Cómo ayuda en la rehabilitación?</h3>
+    <div class="tiles">
+      <button class="tile" aria-expanded="false"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="8" cy="20" r="4"/><circle cx="30" cy="9" r="4"/><circle cx="30" cy="31" r="4"/><path d="M12 18l14-7M12 22l14 7"/></svg><b>Promueve la neuroplasticidad</b><p>Repetir el movimiento asistido ayuda al cerebro a reorganizar sus conexiones con la mano.</p></button>
+      <button class="tile" aria-expanded="false"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15"/><path d="M13 24c2 4 12 4 14 0M14 15v2M26 15v2"/></svg><b>Disminuye la frustración</b><p>Completar el movimiento, aunque sea con ayuda, sostiene la motivación durante la terapia.</p></button>
+      <button class="tile" aria-expanded="false"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 20h28M12 13l-6 7 6 7M28 13l6 7-6 7"/></svg><b>Mejora la movilidad manual</b><p>Ejercicios guiados de apertura y cierre de los dedos, uno por uno o todos juntos.</p></button>
+      <button class="tile" aria-expanded="false"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 33V22M16 33V15M25 33V9M34 33V4"/></svg><b>Aumenta la fuerza y la coordinación</b><p>Series y repeticiones que define el profesional y se registran en la app.</p></button>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓTESIS -->
+<section class="sec light" id="protesis">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,26 C240,6 520,12 780,34 C1040,56 1260,52 1440,22 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <div class="split flip">
+      <figure class="photo-frame">
+        <img src="img/protesis-brazo.webp" alt="Prótesis BAS impresa en 3D probada con el sensor EMG en el antebrazo" class="zoom" loading="lazy">
+        <figcaption>Prueba de la prótesis con el sensor EMG sobre el antebrazo.</figcaption>
+      </figure>
+      <div>
+        <h2>Prótesis biónica</h2>
+        <p class="for">Para personas que sufrieron la amputación de la mano.</p>
+        <p>Aunque falte la mano, los nervios y los músculos del muñón siguen funcionando. La prótesis lee esa señal y la convierte en movimiento. Tocá cada paso:</p>
+        <div class="chain" style="margin-top:1.2rem">
+          <details name="chain" open><summary><span class="n">1</span>El cerebro decide el movimiento</summary><p>Todo empieza cuando la persona decide, por ejemplo, cerrar la mano. La corteza motora, en el lóbulo frontal, planifica y controla los movimientos voluntarios.</p></details>
+          <details name="chain"><summary><span class="n">2</span>Las neuronas envían la orden</summary><p>Las neuronas reciben, procesan y transmiten información con señales químicas y eléctricas. Mandan una orden eléctrica hacia el cuerpo.</p></details>
+          <details name="chain"><summary><span class="n">3</span>Viaja por la médula espinal</summary><p>La médula conecta el cerebro con el resto del cuerpo y lleva la orden hasta los músculos del brazo.</p></details>
+          <details name="chain"><summary><span class="n">4</span>El músculo se contrae</summary><p>Un intercambio de iones en las células musculares provoca la contracción y una pequeña descarga: el potencial de acción.</p></details>
+          <details name="chain"><summary><span class="n">5</span>Aparece la señal mioeléctrica</summary><p>Todas las fibras contrayéndose a la vez crean un campo eléctrico medible. Es muy débil, del orden de los microvoltios. El sensor EMG la capta con electrodos sobre la piel (dos miden y uno es de referencia, para limpiar el ruido) y la amplifica.</p></details>
+          <details name="chain"><summary><span class="n">6</span>La mano se cierra o se abre</summary><p>La placa interpreta la señal y manda a los servomotores un giro de 0° a 180°. Con cada contracción la mano alterna entre cerrar y abrir.</p></details>
+        </div>
+        <div class="flow" aria-label="Diagrama de flujo de la prótesis"><span>Leer sensor</span><i>→</i><span class="q">¿Hay señal?</span><i>no: esperar y volver a leer</i><i>·</i><i>sí →</i><span>Cerrar mano</span></div>
+        <div class="emg-card"><img src="img/sensor-emg.webp" alt="Sensor EMG MyoWare 1.0" loading="lazy"><p><b>Sensor EMG MyoWare 1.0.</b> Detecta la actividad eléctrica del músculo al contraerse. Es el componente exclusivo de la prótesis.</p></div>
+        <div class="chips"><span class="chip">Imita el control biológico</span><span class="chip">Solución viable</span><span class="chip">Simple mantenimiento y reparación</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBALO -->
+<section class="sec deep" id="probalo">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,30 C260,6 560,10 840,32 C1100,52 1300,46 1440,20 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>Probalo vos</h2>
+    <p class="lead">Una simulación de los dos sistemas. Controlá la mano con la app del guante o con la señal de un músculo.</p>
+
+    <div class="demo">
+      <div class="stage">
+        <svg id="hand" viewBox="0 0 300 350" role="img" aria-label="Mano simulada que se abre y se cierra">
+          <g fill="#fff" stroke="#8fb0ff" stroke-width="3">
+            <rect id="f4" x="76" width="30" rx="15"/>
+            <rect id="f3" x="112" width="30" rx="15"/>
+            <rect id="f2" x="148" width="30" rx="15"/>
+            <rect id="f1" x="184" width="30" rx="15"/>
+          </g>
+          <rect x="100" y="285" width="100" height="70" rx="12" fill="#fff" stroke="#8fb0ff" stroke-width="3"/>
+          <rect x="62" y="165" width="176" height="135" rx="46" fill="#fff" stroke="#8fb0ff" stroke-width="3"/>
+          <rect x="92" y="298" width="116" height="30" rx="10" fill="#0b0b8f" stroke="#8fb0ff" stroke-width="3"/>
+          <circle cx="150" cy="313" r="5" fill="#5fe3c4"/>
+          <rect id="f0" x="211" width="30" rx="15" fill="#fff" stroke="#8fb0ff" stroke-width="3"/>
+        </svg>
+        <div class="angles" aria-label="Ángulo de cada servomotor">
+          <div><b id="a0">0°</b><span>Pulgar</span></div><div><b id="a1">0°</b><span>Índice</span></div><div><b id="a2">0°</b><span>Medio</span></div><div><b id="a3">0°</b><span>Anular</span></div><div><b id="a4">0°</b><span>Meñique</span></div>
+        </div>
+        <p class="cap">Cada dedo lo mueve un servomotor de 0° a 180°.</p>
+      </div>
+
+      <div>
+        <div class="dtabs" role="tablist" aria-label="Elegir sistema">
+          <button class="dtab" role="tab" id="dt-g" aria-selected="true" aria-controls="dp-g">Guante con app</button>
+          <button class="dtab" role="tab" id="dt-p" aria-selected="false" aria-controls="dp-p" tabindex="-1">Prótesis con músculo</button>
+        </div>
+
+        <div class="dpanel" id="dp-g" role="tabpanel" aria-labelledby="dt-g">
+          <div class="phone">
+            <div class="phone-top"><span>BAS · Conectado</span><span>Modos</span></div>
+            <div class="pat"><div>PACIENTE<b>Paciente de ejemplo</b></div><div class="streak">Racha: 0 días<br>Iniciando</div></div>
+            <div class="mtabs" role="tablist" aria-label="Modos de la app">
+              <button class="mtab" role="tab" aria-selected="true" data-m="std">Estándar</button>
+              <button class="mtab" role="tab" aria-selected="false" data-m="grip">Agarre</button>
+              <button class="mtab" role="tab" aria-selected="false" data-m="pinch">Pinza</button>
+              <button class="mtab" role="tab" aria-selected="false" data-m="gest">Gestos</button>
+              <button class="mtab" role="tab" aria-selected="false" data-m="seq">Secuencias</button>
+            </div>
+            <div class="mbody" id="mbody"></div>
+            <button class="onoff" id="onoff" aria-pressed="true">ON / OFF</button>
+          </div>
+        </div>
+
+        <div class="dpanel" id="dp-p" role="tabpanel" aria-labelledby="dt-p" hidden>
+          <div class="emg-box">
+            <canvas id="wave" aria-label="Señal del sensor EMG en tiempo real"></canvas>
+            <div class="meter" aria-hidden="true"><i id="lvl"></i><u></u></div>
+            <p class="small">Nivel de señal. La línea blanca es el umbral que activa la mano.</p>
+            <div class="status" id="status"><span id="s1" class="act">Leer sensor</span><span id="s2">¿Hay señal?</span><span id="s3">Cerrar o abrir mano</span></div>
+            <button class="hold" id="hold">Mantené apretado para contraer el músculo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP -->
+<section class="sec mist" id="app">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,36 C300,4 640,16 940,36 C1160,50 1320,40 1440,18 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <div class="app-split">
+      <div class="phone-shot"><img class="zoom" src="img/app-bas.webp" alt="Pantalla de la app BAS con botones por dedo, Mover todos y ON/OFF" loading="lazy"></div>
+      <div>
+        <h2>La app BAS</h2>
+        <p class="lead">Hecha por el equipo en Flutter. Se conecta al guante por Bluetooth y va mucho más allá de abrir y cerrar la mano.</p>
+        <div class="modes-nav" role="tablist" aria-label="Modos de la app">
+          <button class="mn" role="tab" aria-selected="true" data-d="std">Estándar</button>
+          <button class="mn" role="tab" aria-selected="false" data-d="grip">Agarre</button>
+          <button class="mn" role="tab" aria-selected="false" data-d="pinch">Pinza</button>
+          <button class="mn" role="tab" aria-selected="false" data-d="gest">Gestos</button>
+          <button class="mn" role="tab" aria-selected="false" data-d="seq">Secuencias</button>
+          <button class="mn" role="tab" aria-selected="false" data-d="agenda">Agenda y reporte</button>
+        </div>
+        <div class="mode-desc" id="modeDesc" aria-live="polite"></div>
+        <div class="report">
+          <img class="zoom" src="img/reporte-clinico.webp" alt="Reporte clínico generado por la app BAS con historial de rehabilitación" loading="lazy">
+          <p><b>Reporte clínico.</b> La app arma un reporte para el especialista con las notas, la calibración de seguridad, el resumen de rendimiento y el historial de cada sesión: ejercicio, repeticiones y series, velocidad, descanso y estado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTES -->
+<section class="sec light" id="componentes">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,22 C280,52 620,50 900,26 C1120,8 1320,14 1440,36 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>Lo que hay por dentro</h2>
+    <p class="lead">Cada pieza se eligió para que funcione, cueste poco y se consiga fácil.</p>
+
+    <div class="inside" style="margin-top:2.2rem">
+      <figure><img class="zoom" src="img/ortesis-servos.webp" alt="Cinco servomotores dentro del antebrazo del guante" loading="lazy"><figcaption><b>Guante:</b> los servomotores van en la base del antebrazo.</figcaption></figure>
+      <figure><img class="zoom" src="img/protesis-servos.webp" alt="Servomotores dentro del antebrazo de la prótesis" loading="lazy"><figcaption><b>Prótesis:</b> los servos tiran de los hilos desde el antebrazo.</figcaption></figure>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtrar componentes">
+      <button class="fl" aria-pressed="true" data-f="all">Todos</button>
+      <button class="fl" aria-pressed="false" data-f="ortesis">Órtesis</button>
+      <button class="fl" aria-pressed="false" data-f="protesis">Prótesis</button>
+      <button class="fl" aria-pressed="false" data-f="energia">Placa y energía</button>
+    </div>
+
+    <div class="parts" id="parts">
+      <article class="part" data-t="ortesis"><div class="ph"><img src="img/esp32.webp" alt="Placa ESP32" loading="lazy"></div><div class="tx"><span class="tag">Órtesis</span><h4>ESP32</h4><p>Microcontrolador principal, con Bluetooth y Wi-Fi para el control inalámbrico.</p></div></article>
+      <article class="part" data-t="ortesis protesis"><div class="ph"><img src="img/servo-mg90s.webp" alt="Servomotor MG90S" loading="lazy"></div><div class="tx"><span class="tag">Ambos</span><h4>Servo MG90S</h4><p>Realiza el movimiento mecánico: tira de los hilos para flexionar cada dedo.</p></div></article>
+      <article class="part" data-t="protesis"><div class="ph"><img src="img/sensor-emg.webp" alt="Sensor EMG MyoWare" loading="lazy"></div><div class="tx"><span class="tag">Prótesis</span><h4>Sensor EMG MyoWare 1.0</h4><p>Detecta la actividad eléctrica del músculo al contraerse.</p></div></article>
+      <article class="part" data-t="ortesis protesis"><div class="ph"><img src="img/tanza.webp" alt="Rollo de hilo de tanza" loading="lazy"></div><div class="tx"><span class="tag">Ambos</span><h4>Hilo de tanza</h4><p>Actúa como tendón artificial entre los dedos y los servos.</p></div></article>
+      <article class="part" data-t="ortesis"><div class="ph"><img src="img/polea.webp" alt="Polea impresa en 3D con doble anclaje" loading="lazy"></div><div class="tx"><span class="tag">Órtesis</span><h4>Polea con doble anclaje</h4><p>Pieza impresa en 3D que recibe el hilo en cada servo.</p></div></article>
+      <article class="part" data-t="ortesis"><div class="ph"><img src="img/pulsera.webp" alt="Pulsera impresa en 3D" loading="lazy"></div><div class="tx"><span class="tag">Órtesis</span><h4>Pulsera 3D</h4><p>Se imprime en PLA y sostiene los servos en el antebrazo.</p></div></article>
+      <article class="part" data-t="energia"><div class="ph"><img src="img/bateria.webp" alt="Batería Liitokala 18650" loading="lazy"></div><div class="tx"><span class="tag">Energía</span><h4>Baterías 18650 ×4</h4><p>Celdas Liitokala de 3500 mAh para alimentar el sistema.</p></div></article>
+      <article class="part" data-t="energia"><div class="ph"><img src="img/bms.webp" alt="Módulo BMS 2S" loading="lazy"></div><div class="tx"><span class="tag">Energía</span><h4>Módulo BMS 2S</h4><p>Protege y administra la carga de las baterías.</p></div></article>
+      <article class="part" data-t="energia"><div class="ph"><img src="img/rele.webp" alt="Relé" loading="lazy"></div><div class="tx"><span class="tag">Energía</span><h4>Relé</h4><p>Interruptor eléctrico para conectar partes del circuito.</p></div></article>
+      <article class="part" data-t="energia"><div class="ph"><img src="img/vumetro.webp" alt="Vúmetro de batería" loading="lazy"></div><div class="tx"><span class="tag">Energía</span><h4>Vúmetro</h4><p>Indicador del nivel de carga de la batería.</p></div></article>
+      <article class="part" data-t="energia"><div class="ph"><img src="img/jack-dc.webp" alt="Jack DC hembra" loading="lazy"></div><div class="tx"><span class="tag">Energía</span><h4>Jack DC hembra</h4><p>Entrada para conectar la fuente de alimentación.</p></div></article>
+      <article class="part" data-t="energia"><div class="ph"><img src="img/fuente.webp" alt="Fuente de notebook" loading="lazy"></div><div class="tx"><span class="tag">Energía</span><h4>Fuente de notebook</h4><p>Alimenta y carga el sistema.</p></div></article>
+    </div>
+    <p class="small" style="margin-top:1.6rem">La estructura se imprime en 3D con filamento PLA: anillos, paletas, bases y pulsera.</p>
+  </div>
+</section>
+
+<!-- COSTOS -->
+<section class="sec navy" id="costos">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,34 C260,8 560,8 840,26 C1100,44 1300,50 1440,24 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>Cuánto cuesta construirlo</h2>
+    <p class="lead">Un precio aproximado de materiales, para que la tecnología de apoyo sea más accesible.</p>
+
+    <div class="ctabs" role="tablist" aria-label="Elegir sistema">
+      <button class="ctab" role="tab" id="ct-o" aria-selected="true" data-c="o">Órtesis</button>
+      <button class="ctab" role="tab" id="ct-p" aria-selected="false" data-c="p">Prótesis</button>
+    </div>
+    <div class="total" id="total" aria-live="polite"></div>
+    <div class="bar" id="bar" aria-hidden="true"></div>
+    <ul class="rows" id="rows"></ul>
+    <p class="small" style="margin-top:1.2rem">Valores en pesos argentinos. Pueden variar alrededor de un 15% según el proveedor.</p>
+
+    <h3 class="sub-h">¿A quién le sirve?</h3>
+    <div class="channels">
+      <div class="channel"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="7" y="10" width="30" height="26" rx="3"/><path d="M7 18h30M16 10V6M28 10V6M15 26h14"/></svg><b>Centros de kinesiología</b></div>
+      <div class="channel"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 38V14l16-8 16 8v24zM22 17v14M15 24h14"/></svg><b>Hospitales públicos o privados</b></div>
+      <div class="channel"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="14" r="7"/><path d="M8 38c0-8 6-13 14-13s14 5 14 13"/></svg><b>Clientes individuales</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMINO -->
+<section class="sec light" id="camino">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,18 C240,48 540,54 820,30 C1080,8 1300,16 1440,38 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>Cómo llegamos hasta acá</h2>
+    <p class="lead">Probamos, fallamos y cambiamos. Cada fase de pruebas definía la siguiente.</p>
+
+    <div class="steps-h" role="tablist" aria-label="Fases del proyecto">
+      <button class="ph-btn" role="tab" aria-selected="true" data-p="0">Abril<small>Idea</small></button>
+      <button class="ph-btn" role="tab" aria-selected="false" data-p="1">Mayo<small>Primer prototipo</small></button>
+      <button class="ph-btn" role="tab" aria-selected="false" data-p="2">Junio y julio<small>Pruebas</small></button>
+      <button class="ph-btn" role="tab" aria-selected="false" data-p="3">Integración<small>Sensores, app y ferias</small></button>
+    </div>
+    <div class="ph-panel" id="phPanel" aria-live="polite"></div>
+
+    <h3 class="sub-h" style="margin-top:3.4rem">Lo que falló y lo que cambiamos</h3>
+    <p class="small" style="margin-top:.3rem">Tocá cada tarjeta para ver la solución.</p>
+    <div class="swap" id="swap"></div>
+
+    <h3 class="sub-h" style="margin-top:3.4rem">Qué sigue</h3>
+    <div class="next">
+      <div><b>Validación clínica</b>Pruebas con pacientes, con consentimiento médico, para medir el efecto en la rehabilitación.</div>
+      <div><b>App más robusta</b>Que el kinesiólogo personalice las rutinas a distancia y analice datos.</div>
+      <div><b>Guante más liviano</b>Materiales más flexibles y compactos, para un uso diario más cómodo.</div>
+      <div><b>Más sensores</b>Varios sensores musculares para agarres más complejos que abrir y cerrar.</div>
+    </div>
+    <p class="notice"><strong>Importante:</strong> BAS es un prototipo escolar. Todavía no se probó con pacientes y no reemplaza la indicación ni el seguimiento de un profesional de la salud.</p>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="sec navy" id="equipo">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,28 C300,2 600,14 900,34 C1120,48 1320,42 1440,16 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>El equipo</h2>
+    <p class="lead">Estudiantes de 6° 2°, con el objetivo de crear soluciones inclusivas y seguras.</p>
+    <div class="team">
+      <div class="person"><div class="avatar">B<img src="img/Perfil.png" alt="Foto de Bianca Zamira Brandan" loading="lazy" onerror="this.remove()"></div><h3>Bianca Zamira Brandan</h3><p class="role">Plaquetas y estudio de mercado</p><p>Diseño y ruteo de las placas de circuito impreso, ensamblado del hardware y análisis de viabilidad comercial.</p><a class="ig" href="https://www.instagram.com/bbianczb/" target="_blank" rel="noopener">@bbianczb</a></div>
+      <div class="person"><div class="avatar">T<img src="img/Perfil.png" alt="Foto de Thiago Santos Faranca" loading="lazy" onerror="this.remove()"></div><h3>Thiago Santos Faranca</h3><p class="role">Software, diseño 3D, web y app</p><p>Programación del microcontrolador, modelado 3D, maquetado de la web y desarrollo de la app en Flutter.</p><a class="ig" href="https://www.instagram.com/_thiago_faranca/" target="_blank" rel="noopener">@_thiago_faranca</a></div>
+      <div class="person"><div class="avatar">A<img src="img/Perfil.png" alt="Foto de Azul Agostina Teijo" loading="lazy" onerror="this.remove()"></div><h3>Azul Agostina Teijo</h3><p class="role">Dirección, electrónica y documentación</p><p>Coordinación general, diseño de la arquitectura electrónica y redacción de la investigación.</p><a class="ig" href="https://www.instagram.com/azul.teijo/" target="_blank" rel="noopener">@azul.teijo</a></div>
+    </div>
+    <p class="thanks"><strong>Agradecimientos.</strong> Al profesor Gabriel Jimenez, por su asesoramiento, su motivación y el espacio de trabajo. Al profesor Oscar Tobar, por sus sugerencias técnicas y por abrirnos las puertas de su laboratorio. Y a nuestras familias y amigos.</p>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="sec royal" id="contacto">
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,24 C260,50 560,52 860,30 C1100,12 1300,10 1440,32 L1440,60 Z"/></svg>
+  <div class="wrap">
+    <h2>Innovar para sanar</h2>
+    <p class="lead">¿Querés conocer más, colaborar o invitarnos a presentar BAS? Escribinos.</p>
+    <div class="contact-row">
+      <a href="mailto:basproyecto@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.6 7H19.4L12 12.2zM4 9v8h16V9l-8 5.6L4 9z"/></svg>basproyecto@gmail.com</a>
+      <a href="https://www.instagram.com/bas.proyecto/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.2 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>@bas.proyecto</a>
+      <a href="https://wa.me/5491141856284" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3 3.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.7 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.7-.4l-1.8-.9c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.5-2-.2-.3 0-.4.1-.6l.5-.6.3-.5c.1-.2.1-.4 0-.5l-.8-2c-.2-.5-.4-.5-.6-.5z"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fb"><img src="img/logo-bas-blanco.png" alt="">BAS · Sistemas de asistencia biónica</span>
+    <span>© 2026 BAS. Proyecto de 6° 2°.</span>
+  </div>
+</footer>
+
+<dialog id="lb"><img id="lbImg" alt=""><button id="lbClose">Cerrar</button></dialog>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- menú ---------- */
+var burger=$('.burger'),menu=$('#menu');
+burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+
+/* ---------- lightbox ---------- */
+var lb=$('#lb'),lbImg=$('#lbImg');
+$$('img.zoom').forEach(function(im){im.addEventListener('click',function(){lbImg.src=im.src;lbImg.alt=im.alt;lb.showModal()})});
+$('#lbClose').addEventListener('click',function(){lb.close()});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+
+/* ---------- puntitos 3 a 10 de 100 ---------- */
+(function(){
+  var d=$('#dots'),h='';
+  for(var i=0;i<100;i++)h+='<i></i>';
+  d.innerHTML=h;
+  var dots=$$('i',d);
+  function fill(){dots.forEach(function(el,i){if(i<10){setTimeout(function(){el.className=i<3?'on':'range'},reduce?0:i*120)}})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){fill();io.disconnect()}},{threshold:.5});io.observe(d);
+  }else fill();
+})();
+
+/* ---------- puntos interactivos del guante ---------- */
+(function(){
+  var data={
+    anillos:{img:'img/anillos.webp',t:'Anillos 3D. Se colocan en cada falange, mantienen alineados los hilos y reparten la tracción para que cada dedo se mueva de forma segmentada y segura. Se imprimen en PLA.'},
+    guante:{img:'',t:'Guante textil. Una base liviana que cubre la palma y parte del antebrazo. Lleva tubos cosidos, tipo sorbete, por donde pasa el hilo.'},
+    tanza:{img:'img/tanza.webp',t:'Hilo de tanza. Actúa como tendón artificial: va desde los anillos hasta los servos y flexiona cada dedo cuando el motor gira.'},
+    servos:{img:'img/servo-mg90s.webp',t:'Servomotores MG90S. Hay uno por dedo. Al girar tiran de la tanza y realizan el movimiento mecánico de cierre y apertura.'},
+    base:{img:'img/pulsera.webp',t:'Base y pulsera impresas en 3D. Sostienen los servomotores en el antebrazo. Al ser de PLA se pueden adaptar a cada persona.'}
+  };
+  var btns=$$('.hs'),info=$('#hsInfo'),im=$('#hsImg'),tx=$('#hsTxt');
+  function sel(k){
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.k===k)});
+    var d=data[k];tx.textContent=d.t;
+    if(d.img){im.src=d.img;info.classList.remove('noimg')}else{info.classList.add('noimg')}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){sel(b.dataset.k)})});
+  sel('anillos');
+})();
+
+/* ---------- beneficios ---------- */
+$$('.tile').forEach(function(t){t.addEventListener('click',function(){t.setAttribute('aria-expanded',t.getAttribute('aria-expanded')!=='true')})});
+
+/* ---------- mano simulada ---------- */
+var OPEN_H=[85,125,138,120,95],CLOSED_H=[52,42,44,42,38];
+var cur=[0,0,0,0,0],tgt=[0,0,0,0,0];
+var fEl=[0,1,2,3,4].map(function(i){return $('#f'+i)});
+var aEl=[0,1,2,3,4].map(function(i){return $('#a'+i)});
+var handVisible=false,raf=null;
+function draw(){
+  var moving=false;
+  for(var i=0;i<5;i++){
+    var d=tgt[i]-cur[i];
+    if(Math.abs(d)>.002){cur[i]+=d*(reduce?1:.2);moving=true}else cur[i]=tgt[i];
+    var v=cur[i],h=OPEN_H[i]*(1-v)+CLOSED_H[i]*v,el=fEl[i];
+    if(i===0){
+      el.setAttribute('y',265-h);el.setAttribute('height',h+8);
+      el.setAttribute('transform','rotate('+(38*(1-v)+(-28)*v)+' 226 265)');
+    }else{
+      el.setAttribute('y',195-h);el.setAttribute('height',h+12);
+    }
+    var deg=Math.round(v*180);
+    if(aEl[i].textContent!==deg+'°')aEl[i].textContent=deg+'°';
+  }
+  raf=moving?requestAnimationFrame(draw):null;
+}
+function kick(){if(!raf)raf=requestAnimationFrame(draw)}
+function setT(a){tgt=a.slice();kick()}
+// [pulgar, índice, medio, anular, meñique]
+var G={open:[0,0,0,0,0],fist:[1,1,1,1,1],point:[1,0,1,1,1],peace:[1,0,0,1,1],thumb:[0,1,1,1,1],rock:[1,0,1,1,0]};
+draw();
+
+/* ---------- panel guante / app ---------- */
+var mode='std',power=true,seqTimer=null,seqIdx=0;
+var mbody=$('#mbody'),onoff=$('#onoff');
+var fingers=['Pulgar','Índice','Medio','Anular','Meñique'];
+function stopSeq(){if(seqTimer){clearInterval(seqTimer);seqTimer=null}}
+function btn(txt,cls,fn,pressed){
+  var b=document.createElement('button');b.className='ab '+(cls||'');b.textContent=txt;
+  if(pressed!==undefined)b.setAttribute('aria-pressed',pressed);
+  b.addEventListener('click',function(){fn(b)});return b;
+}
+function renderMode(){
+  stopSeq();mbody.innerHTML='';setT(G.open);
+  var closed=[0,0,0,0,0];
+  if(mode==='std'){
+    fingers.forEach(function(n,i){mbody.appendChild(btn(n,i===4?'wide':'',function(b){closed[i]=closed[i]?0:1;b.setAttribute('aria-pressed',!!closed[i]);setT(closed)},false))});
+    var all=false;mbody.appendChild(btn('Mover todos','wide',function(b){all=!all;closed=[all?1:0,all?1:0,all?1:0,all?1:0,all?1:0];$$('.ab[aria-pressed]',mbody).forEach(function(x){x.setAttribute('aria-pressed',all)});setT(closed)}));
+  }else if(mode==='grip'){
+    var l=document.createElement('label');l.setAttribute('for','grip');l.id='gl';l.textContent='Fuerza de agarre: 0°';
+    var r=document.createElement('input');r.type='range';r.id='grip';r.min=0;r.max=180;r.value=0;
+    r.addEventListener('input',function(){var v=r.value/180;l.textContent='Fuerza de agarre: '+r.value+'°';setT([v,v,v,v,v])});
+    var h=document.createElement('p');h.className='hint';h.textContent='En la app, la fuerza de agarre se ajusta con una meta en grados (por ejemplo, 120°).';
+    mbody.appendChild(l);mbody.appendChild(r);mbody.appendChild(h);
+  }else if(mode==='pinch'){
+    [['Pulgar + Índice',1],['Pulgar + Medio',2],['Pulgar + Anular',3],['Pulgar + Meñique',4]].forEach(function(p){
+      mbody.appendChild(btn(p[0],'',function(){var a=[.6,0,0,0,0];a[p[1]]=.6;setT(a)}));
+    });
+    mbody.appendChild(btn('Abrir mano','wide',function(){setT(G.open)}));
+  }else if(mode==='gest'){
+    [['Señalar',G.point],['Paz (V)',G.peace],['Pulgar arriba',G.thumb],['Rock',G.rock]].forEach(function(g){mbody.appendChild(btn(g[0],'',function(){setT(g[1])}))});
+    mbody.appendChild(btn('Abrir mano','wide',function(){setT(G.open)}));
+  }else if(mode==='seq'){
+    var seq=[['Paz (V)',G.peace],['Señalar',G.point],['Pulgar arriba',G.thumb],['Rock',G.rock],['Puño',G.fist],['Mano abierta',G.open]];
+    var st=document.createElement('p');st.className='hint';st.textContent='Ejecuta varios gestos seguidos, de forma automática.';
+    var run=btn('Iniciar secuencia','wide',function(b){
+      if(seqTimer){stopSeq();b.textContent='Iniciar secuencia';st.textContent='Secuencia detenida.';setT(G.open);return}
+      b.textContent='Detener secuencia';seqIdx=0;
+      var step=function(){var s=seq[seqIdx%seq.length];st.textContent='Gesto: '+s[0];setT(s[1]);seqIdx++};
+      step();seqTimer=setInterval(step,1500);
+    });
+    mbody.appendChild(run);mbody.appendChild(st);
+  }
+}
+$$('.mtab').forEach(function(t){t.addEventListener('click',function(){
+  mode=t.dataset.m;$$('.mtab').forEach(function(x){x.setAttribute('aria-selected',x===t)});renderMode();
+})});
+onoff.addEventListener('click',function(){
+  power=!power;onoff.setAttribute('aria-pressed',power);mbody.classList.toggle('off',!power);
+  if(!power){stopSeq();setT(G.open)}else renderMode();
+});
+renderMode();
+
+/* ---------- pestañas guante / prótesis ---------- */
+var dtabs=$$('.dtab'),emgOn=false;
+function showDemo(t){
+  dtabs.forEach(function(x){var s=x===t;x.setAttribute('aria-selected',s);x.tabIndex=s?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!s});
+  emgOn=t.id==='dt-p';setT(G.open);closedEmg=false;stopSeq();
+  if(emgOn){resize();startWave()}else if(!emgOn){renderMode()}
+}
+dtabs.forEach(function(t,i){
+  t.addEventListener('click',function(){showDemo(t)});
+  t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=dtabs[(i+1)%2];showDemo(n);n.focus()}});
+});
+
+/* ---------- señal EMG ---------- */
+var cv=$('#wave'),ctx=cv.getContext('2d'),hold=$('#hold'),lvl=$('#lvl');
+var S=[$('#s1'),$('#s2'),$('#s3')];
+var pressed=false,amp=.05,latched=false,closedEmg=false,buf=[],N=240,wraf=null,lastSt=-1,tt=0,DPR=1;
+function resize(){DPR=window.devicePixelRatio||1;cv.width=cv.clientWidth*DPR;cv.height=cv.clientHeight*DPR}
+function setStatus(k){
+  if(k===lastSt)return;lastSt=k;
+  S.forEach(function(s){s.classList.remove('act')});
+  if(k===0)S[0].classList.add('act');
+  if(k===1){S[0].classList.add('act');S[1].classList.add('act')}
+  if(k===2){S.forEach(function(s){s.classList.add('act')})}
+}
+function wave(){
+  tt+=.5;
+  var drive=pressed?.9:.05;amp+=(drive-amp)*.1;
+  var s=amp*(Math.random()*2-1)*(.6+.4*Math.sin(tt*.9))+(Math.random()-.5)*.04;
+  buf.push(s);if(buf.length>N)buf.shift();
+  var W=cv.width,H=cv.height,mid=H/2;
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1*DPR;ctx.setLineDash([6*DPR,6*DPR]);
+  [.45,-.45].forEach(function(th){var y=mid-th*mid*.95;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()});
+  ctx.setLineDash([]);ctx.strokeStyle='#5fe3c4';ctx.lineWidth=2*DPR;ctx.beginPath();
+  for(var i=0;i<buf.length;i++){var x=i/(N-1)*W,y=mid-buf[i]*mid*.95;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}
+  ctx.stroke();
+  lvl.style.width=Math.min(100,amp*100/.95)+'%';
+  if(pressed&&amp>.45){
+    setStatus(2);
+    if(!latched){latched=true;closedEmg=!closedEmg;setT(closedEmg?G.fist:G.open)}
+  }else if(pressed){setStatus(1)}
+  else{setStatus(0);if(amp<.25)latched=false}
+  wraf=requestAnimationFrame(wave);
+}
+function startWave(){if(!wraf&&emgOn)wraf=requestAnimationFrame(wave)}
+function stopWave(){if(wraf){cancelAnimationFrame(wraf);wraf=null}}
+function down(e){if(e&&e.preventDefault)e.preventDefault();pressed=true;hold.classList.add('down');startWave()}
+function up(){pressed=false;hold.classList.remove('down')}
+hold.addEventListener('pointerdown',down);
+['pointerup','pointerleave','pointercancel'].forEach(function(ev){hold.addEventListener(ev,up)});
+hold.addEventListener('keydown',function(e){if((e.key===' '||e.key==='Enter')&&!e.repeat){down(e)}});
+hold.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter')up()});
+hold.addEventListener('contextmenu',function(e){e.preventDefault()});
+window.addEventListener('resize',function(){if(emgOn)resize()});
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(en){if(en[0].isIntersecting){if(emgOn)startWave()}else stopWave()},{threshold:.05}).observe($('#probalo'));
+}
+
+/* ---------- modos de la app (descripciones) ---------- */
+var MD={
+  std:'Modo estándar: abre o cierra cada dedo por separado, o todos a la vez con “Mover todos”.',
+  grip:'Modo agarre: cierra la mano con una fuerza ajustable, definida por una meta en grados.',
+  pinch:'Modo pinza: junta el pulgar con el índice, el medio, el anular o el meñique para practicar el agarre fino.',
+  gest:'Modo gestos: reproduce movimientos como señalar, la “V” de la paz, el pulgar arriba o el gesto de rock.',
+  seq:'Modo secuencias: ejecuta varios gestos seguidos de forma automática, para repetir ejercicios sin tocar la pantalla.',
+  agenda:'Agenda de rehabilitación: el especialista registra ejercicios, series y repeticiones, velocidad, tiempos de descanso y observaciones. La app guarda el historial y suma una racha de días para mantener la constancia.'
+};
+var md=$('#modeDesc');md.textContent=MD.std;
+$$('.mn').forEach(function(b){b.addEventListener('click',function(){$$('.mn').forEach(function(x){x.setAttribute('aria-selected',x===b)});md.textContent=MD[b.dataset.d]})});
+
+/* ---------- componentes: filtros ---------- */
+$$('.fl').forEach(function(b){b.addEventListener('click',function(){
+  $$('.fl').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+  var f=b.dataset.f;
+  $$('.part').forEach(function(p){p.hidden=!(f==='all'||p.dataset.t.split(' ').indexOf(f)>-1)});
+})});
+
+/* ---------- costos ---------- */
+var money=function(n){return '$'+n.toLocaleString('es-AR')};
+var COST={
+  o:{total:226020,parts:[
+    {n:'Componentes electrónicos y textiles',d:'ESP32, 5 servos, guante de tela, tanza y mercería',v:97970,c:'#8fb0ff'},
+    {n:'Estructura impresa en 3D',d:'Anillos, paletas, base de servos y pulsera en PLA',v:7540,c:'#5fe3c4'},
+    {n:'Placa y energía',d:'Fuente, jack, ESP32, vúmetro, relé, BMS y 4 baterías',v:120260,c:'#ffffff'}]},
+  p:{total:251031,parts:null}
+};
+function renderCost(k){
+  var c=COST[k],tot=$('#total'),bar=$('#bar'),rows=$('#rows');
+  tot.innerHTML=money(c.total)+'<small>Precio total aproximado</small>';
+  bar.innerHTML='';rows.innerHTML='';
+  if(c.parts){
+    var sum=c.parts.reduce(function(a,p){return a+p.v},0);
+    c.parts.forEach(function(p){
+      var i=document.createElement('i');i.style.width=(p.v/sum*100)+'%';i.style.background=p.c;i.title=p.n;bar.appendChild(i);
+      var li=document.createElement('li');li.innerHTML='<u style="background:'+p.c+'"></u><div><b>'+p.n+'</b><span>'+p.d+'</span></div><em>'+money(p.v)+'</em>';rows.appendChild(li);
+    });
+    bar.style.display='flex';
+  }else{
+    bar.style.display='none';
+    var li=document.createElement('li');li.innerHTML='<u style="background:#8fb0ff"></u><div><b>Mano y antebrazo impresos en 3D, servos, placa, sensor y accesorios</b><span>Estimación del costo total de materiales de la prótesis.</span></div><em></em>';rows.appendChild(li);
+  }
+}
+$$('.ctab').forEach(function(t){t.addEventListener('click',function(){
+  $$('.ctab').forEach(function(x){x.setAttribute('aria-selected',x===t)});renderCost(t.dataset.c)})});
+renderCost('o');
+
+/* ---------- camino ---------- */
+var PH=[
+  'Definimos el problema, elegimos el nombre BAS y partimos de una idea: una mano 3D con control por voz.',
+  'Definimos la estructura del guante (sorbetes y tanza), elegimos los servomotores y armamos el primer montaje.',
+  'Reemplazamos el control por voz por Bluetooth con ESP32. Hicimos pruebas de código y consultamos a un kinesiólogo del Hospital Municipal Eva Perón para validar la ergonomía.',
+  'Sumamos el sensor MyoWare 1.0 a la prótesis, creamos la app propia y probamos el sistema en las ferias distrital y regional.'
+];
+var pp=$('#phPanel');pp.textContent=PH[0];
+$$('.ph-btn').forEach(function(b){b.addEventListener('click',function(){
+  $$('.ph-btn').forEach(function(x){x.setAttribute('aria-selected',x===b)});pp.textContent=PH[+b.dataset.p]})});
+
+var SW=[
+  {b:'El primer guante cerraba toda la mano de golpe',p:'Con base de tela y tubos pegados, los hilos tiraban de todos los dedos juntos y de forma brusca.',a:'Anillos 3D en cada falange',ap:'Mantienen alineados los hilos y reparten la tracción, para un movimiento por dedo, más fluido y seguro.'},
+  {b:'Los servos iniciales no tenían fuerza',p:'Los SG90 no daban el torque necesario y sus engranajes se desgastaban rápido.',a:'Servos de mayor torque',ap:'Las pruebas comparativas mostraron una mejora clara en la respuesta y en la fuerza de tracción.'},
+  {b:'El guante todo impreso en 3D era incómodo',p:'Era rígido para usarlo un rato largo.',a:'Diseño híbrido',ap:'Un guante textil más chico, con tubos cosidos y una pulsera con los servos: más ergonómico y fácil de armar.'},
+  {b:'Los sensores musculares caseros fallaban',p:'Probamos uno con LDR y otro con amplificadores operacionales, y ninguno fue confiable.',a:'Sensor comercial MyoWare 1.0',ap:'Dio lecturas mucho más estables para controlar la prótesis.'}
+];
+var sw=$('#swap');
+SW.forEach(function(s){
+  var b=document.createElement('button'),after=false;b.className='sw';
+  function paint(){
+    b.classList.toggle('after',after);
+    b.innerHTML='<span class="k">'+(after?'Lo que cambiamos':'Lo que falló')+'</span><b>'+(after?s.a:s.b)+'</b><p>'+(after?s.ap:s.p)+'</p><span class="hint">'+(after?'Tocá para volver':'Tocá para ver la solución')+'</span>';
+  }
+  b.addEventListener('click',function(){after=!after;paint()});paint();sw.appendChild(b);
+});
 })();
 </script>
 </body>
